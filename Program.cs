@@ -94,5 +94,10 @@ namespace Hello_World_2
             //This will make sure the app stays open
             Console.ReadLine();
         }
+
+        public static void SpellBook()
+        {
+            Console.WriteLine("Welcome to your spellbook.  In this menu, you will be able to see all your known spells and their descriptions.")
+        }
     }
 }
