@@ -1,0 +1,13 @@
+C:\Users\dylan\source\repos\Creatures-of-Calden\Creatures-of-Calden\bin\Debug\netcoreapp3.1\Creatures-of-Calden.exe
+C:\Users\dylan\source\repos\Creatures-of-Calden\Creatures-of-Calden\bin\Debug\netcoreapp3.1\Creatures-of-Calden.deps.json
+C:\Users\dylan\source\repos\Creatures-of-Calden\Creatures-of-Calden\bin\Debug\netcoreapp3.1\Creatures-of-Calden.runtimeconfig.json
+C:\Users\dylan\source\repos\Creatures-of-Calden\Creatures-of-Calden\bin\Debug\netcoreapp3.1\Creatures-of-Calden.runtimeconfig.dev.json
+C:\Users\dylan\source\repos\Creatures-of-Calden\Creatures-of-Calden\bin\Debug\netcoreapp3.1\Creatures-of-Calden.dll
+C:\Users\dylan\source\repos\Creatures-of-Calden\Creatures-of-Calden\bin\Debug\netcoreapp3.1\Creatures-of-Calden.pdb
+C:\Users\dylan\source\repos\Creatures-of-Calden\Creatures-of-Calden\obj\Debug\netcoreapp3.1\Creatures-of-Calden.csprojAssemblyReference.cache
+C:\Users\dylan\source\repos\Creatures-of-Calden\Creatures-of-Calden\obj\Debug\netcoreapp3.1\Creatures-of-Calden.csproj.CoreCompileInputs.cache
+C:\Users\dylan\source\repos\Creatures-of-Calden\Creatures-of-Calden\obj\Debug\netcoreapp3.1\Creatures-of-Calden.AssemblyInfoInputs.cache
+C:\Users\dylan\source\repos\Creatures-of-Calden\Creatures-of-Calden\obj\Debug\netcoreapp3.1\Creatures-of-Calden.AssemblyInfo.cs
+C:\Users\dylan\source\repos\Creatures-of-Calden\Creatures-of-Calden\obj\Debug\netcoreapp3.1\Creatures-of-Calden.dll
+C:\Users\dylan\source\repos\Creatures-of-Calden\Creatures-of-Calden\obj\Debug\netcoreapp3.1\Creatures-of-Calden.pdb
+C:\Users\dylan\source\repos\Creatures-of-Calden\Creatures-of-Calden\obj\Debug\netcoreapp3.1\Creatures-of-Calden.genruntimeconfig.cache

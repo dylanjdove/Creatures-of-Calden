@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Creatures-of-Calden/1.0.0": {
+        "runtime": {
+          "Creatures-of-Calden.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Creatures-of-Calden/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
