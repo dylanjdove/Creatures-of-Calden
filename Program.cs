@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,23 +16,22 @@ namespace Hello_World_2
 
         public static void Game()
         {
+           
             //create variables to hold user data
             string userName;
             int userAge;
-
-            string spellBook = "spellbook";
 
             //prints opening message
             Console.WriteLine("Welcome to the world.");
             Console.WriteLine("Please input your user name.");
 
             //write user name to screen
-            userName = Console.ReadLine();
+            userName = UserInput();
             Console.WriteLine("Hello, " + userName);
 
             //obtains user age
             Console.WriteLine("Please input your age.");
-            userAge = int.Parse(Console.ReadLine());
+            userAge = int.Parse(UserInput());
 
             //closes the app if user is underage.
             if (userAge < 18)
@@ -51,7 +51,7 @@ namespace Hello_World_2
             Console.WriteLine("Please choose a class for your adventure");
             Console.WriteLine("Your options are as follows:");
             Console.WriteLine("Rogue, Wizard, Barbarian, Fighter, Monk");
-            userClass = Console.ReadLine().ToLower();
+            userClass = UserInput();
 
             //close application if user chooses monk
             if (userClass == "monk")
@@ -97,7 +97,32 @@ namespace Hello_World_2
 
         public static void SpellBook()
         {
-            Console.WriteLine("Welcome to your spellbook.  In this menu, you will be able to see all your known spells and their descriptions.")
+            Console.WriteLine("Welcome to your spellbook.  In this menu, you will be able to see all your known spells and their descriptions.");
+
+            var arr = new[]
+ {
+                    @"     __...--~~~~~-._   _.-~~~~~--...__ ",
+                    @"   //               `V'               \\\\ ",
+                    @"  //                 |                 \\\\ ",
+                    @" //__...--~~~~~~-._  |  _.-~~~~~~--...__\\\\ ",
+                    @"//__.....----~~~~._\\ | /_.~~~~----.....__\\\\",
+                    @"===================\\\\|//====================",
+                    @"                    `---`",
+            };
+            Console.WriteLine("\n\n");
+            foreach (string line in arr) Console.WriteLine(line);
+            Console.ReadLine();
+            
+        }
+        public static string UserInput()
+        {
+            string userInput = Console.ReadLine().ToLower();
+            if(userInput == ("spellbook"))
+            {
+                SpellBook();
+            }
+
+            return (userInput);
         }
     }
 }
