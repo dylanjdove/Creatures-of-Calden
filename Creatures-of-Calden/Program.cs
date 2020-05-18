@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Creatures_of_Calden;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -44,20 +45,22 @@ namespace Hello_World_2
             Console.WriteLine("In the world of Calden, there are many dangerous creatures.  Many of them will be too strong for you to defeat early on.");
 
             //create a variable to hold user's class
-            string userClass;
 
+            CharacterData newCharacter = new CharacterData();
             //determine the class the user wishes to play
 
             Console.WriteLine("Please choose a class for your adventure");
             Console.WriteLine("Your options are as follows:");
             Console.WriteLine("Rogue, Wizard, Barbarian, Fighter, Monk");
-            userClass = UserInput();
+            newCharacter.characterClass = UserInput();
+            
 
             //close application if user chooses monk
             if (userClass == "monk")
             {
                 Console.WriteLine("Rocks Fall.  Everyone Dies.");
                 System.Environment.Exit(0);
+                Console.ReadLine();
             }
 
             Console.WriteLine("You have chosen " + userClass);
@@ -66,30 +69,34 @@ namespace Hello_World_2
             {
                 Console.WriteLine("Rogues start with two knives and a crossbow.");
                 Console.WriteLine("Rogues can wear light or medium armor.");
-                Console.WriteLine("At first level, rogues can sneak attack and disengage.");
+                Console.WriteLine("At first level, rogues can sneak attack and disengage. \n");
             }
 
             if (userClass == "wizard")
             {
-                Console.WriteLine("Wizards start with a pouch of spell components and a knife.");
+                Console.WriteLine("Wizards start with a pouch of spell components, a spellbook, and a knife.");
                 Console.WriteLine("Wizards are not permitted to wear any armor per the Rialto Concord.");
                 Console.WriteLine("Wizards know three basic spells at first level and learn more as they progress.");
                 Console.WriteLine("At first level, all wizards know the magic bolt, summon fire, and telekinesis spells.");
-                Console.WriteLine("To access your spellbook, simply type \"spellbook\" at any time.");
+                Console.WriteLine("To access your spellbook, simply type \"spellbook\" at any time. \n");
 
             }
             if (userClass == "barbarian")
             {
                 Console.WriteLine("Barbarians start with an axe and a wooden shield.");
                 Console.WriteLine("Barbarians are tough, and thus cannot wear armor, or their family will disown them.");
-                Console.WriteLine("At first level, barbarians can entle bloodlust twice a day.");
+                Console.WriteLine("At first level, barbarians can entle bloodlust twice a day. \n");
             }
             if (userClass == "fighter")
             {
                 Console.WriteLine("Fighters start with two shortswords and rusty armor.");
-                Console.WriteLine("Fighters can wear any armor, as long they have a sufficient strength score.");
+                Console.WriteLine("Fighters can wear any armor, as long they have a sufficient strength score. \n");
 
             }
+
+            Console.WriteLine("You find yourself awakening in an unfamiliar location.  You're in what appears to be a once-fine tavern that has gone to disrepair.  There are no patrons, and the fire is unlit. \n");
+            Console.WriteLine("You are sitting hunched over in a corner table, with a decent view of the entire room.  You can see that the door is hanging off it's hinges and there's no propieter in sight. \n");
+            Console.WriteLine("The whole room appears to be covered in a substantial layer of dust.  Oddly, you have what appears to be a clean glass full of ale on the table in front of you. \n");
 
             //This will make sure the app stays open
             Console.ReadLine();

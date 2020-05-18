@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dylan\\source\\repos\\Creatures-of-Calden\\Creatures-of-Calden\\Creatures-of-Calden.csproj": {}
+    "D:\\Git repos\\Creatures-of-Calden\\Creatures-of-Calden\\Creatures-of-Calden.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dylan\\source\\repos\\Creatures-of-Calden\\Creatures-of-Calden\\Creatures-of-Calden.csproj": {
+    "D:\\Git repos\\Creatures-of-Calden\\Creatures-of-Calden\\Creatures-of-Calden.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dylan\\source\\repos\\Creatures-of-Calden\\Creatures-of-Calden\\Creatures-of-Calden.csproj",
+        "projectUniqueName": "D:\\Git repos\\Creatures-of-Calden\\Creatures-of-Calden\\Creatures-of-Calden.csproj",
         "projectName": "Creatures-of-Calden",
-        "projectPath": "C:\\Users\\dylan\\source\\repos\\Creatures-of-Calden\\Creatures-of-Calden\\Creatures-of-Calden.csproj",
+        "projectPath": "D:\\Git repos\\Creatures-of-Calden\\Creatures-of-Calden\\Creatures-of-Calden.csproj",
         "packagesPath": "C:\\Users\\dylan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dylan\\source\\repos\\Creatures-of-Calden\\Creatures-of-Calden\\obj\\",
+        "outputPath": "D:\\Git repos\\Creatures-of-Calden\\Creatures-of-Calden\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dylan\\AppData\\Roaming\\NuGet\\NuGet.Config",
