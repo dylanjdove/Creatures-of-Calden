@@ -9,19 +9,31 @@ namespace Creatures_of_Calden
 
         public CharacterData CreateCharacter()
         {
+            CharacterData newCharacter = new CharacterData();
             UserInput input = new UserInput();
 
             //create variables to hold user data
             string userName;
             int userAge;
 
+            Console.WriteLine(@"|`-._/\_.-`|   _____                _                                __    _____      _     _                /\    ");
+            Console.WriteLine(@"|    ||    |  / ____|              | |                              / _|  / ____|    | |   | |               ||    ");
+            Console.WriteLine(@"|___o()o___| | |     _ __ ___  __ _| |_ _   _ _ __ ___  ___    ___ | |_  | |     __ _| | __| | ___ _ __      ||    ");
+            Console.WriteLine(@"|__((<>))__| | |    | '__/ _ \/ _` | __| | | | '__/ _ \/ __|  / _ \|  _| | |    / _` | |/ _` |/ _ \ '_ \     ||    ");
+            Console.WriteLine(@"\   o\/o   / | |____| | |  __/ (_| | |_| |_| | | |  __/\__ \ | (_) | |   | |___| (_| | | (_| |  __/ | | | ()====() ");
+            Console.WriteLine(@" \        /   \_____|_|  \___|\__,_|\__|\__,_|_|  \___||___/  \___/|_|    \_____\__,_|_|\__,_|\___|_| |_|    ||    ");
+            Console.WriteLine(@"  \______/                                                                                                   ()    ");
+            Console.WriteLine("\n \n \n");
+            
+                                                                                                                                                             
+
             //prints opening message
             Console.WriteLine("Welcome to the world.");
             Console.WriteLine("Please input your user name.");
 
             //write user name to screen
-            userName = input.Input();
-            Console.WriteLine("Hello, " + userName);
+            newCharacter.UserName = input.Input();
+            Console.WriteLine($"Hello, {newCharacter.UserName}");
 
             //obtains user age
             Console.WriteLine("Please input your age.");
@@ -42,7 +54,8 @@ namespace Creatures_of_Calden
             Console.WriteLine("Drinking a potion will restore a set amount of health based on the type of potion.  Sleeping will restore you to full health.  Some items will also restore you to full health.");
             //create a variable to hold user's class
 
-            CharacterData newCharacter = new CharacterData();
+            
+            
             //determine the class the user wishes to play
 
             Console.WriteLine("Please choose a class for your adventure");
@@ -91,11 +104,7 @@ namespace Creatures_of_Calden
 
             }
 
-            Console.WriteLine("You find yourself awakening in an unfamiliar location.  You're in what appears to be a once-fine tavern that has gone to disrepair.  There are no patrons, and the fire is unlit. \n");
-            Console.WriteLine("You are sitting hunched over in a corner table, with a decent view of the entire room.  You can see that the door is hanging off it's hinges and there's no propieter in sight. \n");
-            Console.WriteLine("The whole room appears to be covered in a substantial layer of dust.  Oddly, you have what appears to be a clean glass full of ale on the table in front of you. \n");
-            Console.WriteLine("In this game, you will be presented with 3 options for each action you may take.  Remember to choose wisely.");
-            Console.WriteLine("You have three options you may take:  drink from the glass, ignore the glass, or inspect the glass.");
+
 
 
 

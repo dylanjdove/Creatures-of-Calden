@@ -12,6 +12,8 @@ namespace Creatures_of_Calden
         {
             CharacterCreator characterCreator = new CharacterCreator();
             player1 = characterCreator.CreateCharacter();
+            Part1 newBeginning = new Part1();
+            newBeginning.Story();
 
         }
         
