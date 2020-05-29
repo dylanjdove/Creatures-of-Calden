@@ -16,5 +16,15 @@ namespace Creatures_of_Calden
 
             return (userInput);
         }
+
+        public char InputKey()
+        {
+            char userInputKey = Console.ReadKey().KeyChar;
+            if (userInputKey == 's')
+            {
+                Game.player1.playerSpellbook.AccessSpellbook();
+            }
+            return (userInputKey);
+        }
     }
 }

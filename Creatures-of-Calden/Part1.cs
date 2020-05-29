@@ -17,10 +17,10 @@ namespace Creatures_of_Calden
             Console.WriteLine("Oddly, you have what appears to be a clean glass full of ale on the table in front of you. In this game, you will be presented with 3 options for each action you may take.  Remember to choose wisely.");
             Console.WriteLine("You have three options you may take: \n1.) Drink from the glass, \n2.) Ignore the glass \n3.) Destroy the glass.");
 
-            string choice = input.Input();
-            string choice2 = "";
+            char choice = input.InputKey();
+            char choice2;
 
-            if (choice == "1" || choice == "1.)")
+            if (choice == '1')
             {
                 Console.WriteLine("As you bring the glass to your lips, you notice the ale has a strong, earthy scent.  It smells like ale, but not exactly like the ale you're used to.");
                 Console.WriteLine("This is your first hint that wherever you are, it must not be anywhere near where you come from.  You shrug your shoulders slightly, deciding to let fate control your path.");
@@ -34,11 +34,11 @@ namespace Creatures_of_Calden
                 Console.WriteLine("I will aid you in every way possible throughout your journey, but I will be limited in the ways I can assist.\"\n \n");
                 Console.WriteLine("As the voice finishes speaking, you hear a commotion outside.  There appear to be two distinct voices arguing with each other, though you can't quite make out their words.");
                 Console.WriteLine("Your options are:  \n1.) Investigate the commotion \n2.) Attempt to hide \n3.) Prepare for battle");
-                choice2 = input.Input();
+                choice2 = input.InputKey();
             }
-            
 
-            else if (choice == "2" || choice == "2.)")
+
+            else if (choice == '2')
             {
                 Console.WriteLine("You choose to ignore the glass, distrustful of a drink you haven't seen prepared.  You glance around your surroundings, but you remain a bit disoriented.");
                 Console.WriteLine("As you survey your surroundings, you rise from your seat.  You walk around the room, checking to see if there is anything of interest.");
@@ -48,10 +48,10 @@ namespace Creatures_of_Calden
                 Console.WriteLine("You must break into the castle outside of the town you are in and find the throne room.  You must then destroy the throne.  I will attempt to aid in any way I can, though it won't be much.");
                 Console.WriteLine($"Right now, there are two bandits approaching this tavern.  They have been hired to kill you.  I suggest you kill them first.  I will talk to you more when I can.  Goodbye, fledgling {Game.player1.Class}\"");
                 Console.WriteLine("Your options are:  \n1.) Investigate the commotion \n2.) Attempt to hide \n3.) Prepare for battle");
-                choice2 = input.Input();
+                choice2 = input.InputKey();
             }
 
-            else if (choice == "3" || choice == "3.)")
+            else if (choice == '3')
             {
                 Console.WriteLine("You pick up the glass, lobbing it across the room.  As the glass hits the wall, it explodes in a shower of glass shards and ale.");
                 Console.WriteLine("As the ale runs down the wall, you hear a disembodied voice coming from nowhere you can tell.");
@@ -61,7 +61,7 @@ namespace Creatures_of_Calden
                 Console.WriteLine("Once you're inside, find the throne room and destroy the throne.  We're out of time.  Prepare yourself!\"");
                 Console.WriteLine("As the voice finishes speaking you hear two new voices coming from outside the tavern.  It appears the sound of you destroying the glass has alerted them to your location.");
                 Console.WriteLine("Your options are:  \n1.) Investigate and attempt to talk to the men  \n2.) Attempt to hide \n3.) Prepare for battle");
-                choice2 = input.Input();
+                choice2 = input.InputKey();
             }
 
 

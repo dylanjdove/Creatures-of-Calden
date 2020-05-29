@@ -6,7 +6,7 @@ namespace Creatures_of_Calden
 {
     class CharacterData
     {
-        public string Class { get; set; }
+        public char Class { get; set; }
         public SpellBook playerSpellbook { get; set; }
         public string UserName { get; set; }
         public int Health { get; set; }
@@ -14,7 +14,7 @@ namespace Creatures_of_Calden
         public CharacterData()
         {
             Level = 1;
-            if (Class == "wizard")
+            if (Class == 'w')
             {
                 Health = 20;
                 Inventory = new string[] { "health potion", "spellbook", };
@@ -27,7 +27,7 @@ namespace Creatures_of_Calden
                 Wis = 11;
                 Cha = 10;
             }
-            if (Class == "rogue")
+            if (Class == 'r')
             {
                 Health = 30;
                 Inventory = new string[] { "health potion", };
@@ -39,7 +39,7 @@ namespace Creatures_of_Calden
                 Wis = 8;
                 Cha = 13;
             }
-            if (Class == "barbarian")
+            if (Class == 'b')
             {
                 Health = 40;
                 Inventory = new string[] { "health potion", };
@@ -51,7 +51,7 @@ namespace Creatures_of_Calden
                 Wis = 8;
                 Cha = 8;
             }
-            if (Class == "fighter")
+            if (Class == 'f')
             {
                 Health = 40;
                 Inventory = new string[] { "health potion", };
