@@ -1,24 +1,25 @@
-﻿using System;
+﻿using Creatures_of_Calden.Story;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Text;
+using Creatures_of_Calden.Enemies;
 
 namespace Creatures_of_Calden
 {
-    class Part1
+    static class Part1
     {
-        public void Story()
+        public static void Story()
         {
-            UserInput input = new UserInput();
-
             Console.WriteLine("You find yourself awakening in an unfamiliar location, drowsy and disoriented.  You're in what appears to be a once-fine tavern that has gone to disrepair.  \n");
             Console.WriteLine("There are no patrons, and the fire is unlit. You are sitting hunched over in a corner table, with a decent view of the entire room. \n");
             Console.WriteLine("You can see that the door is hanging off it's hinges and there's no propieter in sight.  The whole room appears to be covered in a substantial layer of dust.  \n");
             Console.WriteLine("Oddly, you have what appears to be a clean glass full of ale on the table in front of you. In this game, you will be presented with 3 options for each action you may take.  Remember to choose wisely.");
             Console.WriteLine("You have three options you may take: \n1.) Drink from the glass, \n2.) Ignore the glass \n3.) Destroy the glass.");
 
-            char choice = input.InputKey();
-            char choice2;
+            char choice = UserInput.InputKey();
+            char choice2 = ' ';
+            char choice3 = ' ';
 
             if (choice == '1')
             {
@@ -34,7 +35,7 @@ namespace Creatures_of_Calden
                 Console.WriteLine("I will aid you in every way possible throughout your journey, but I will be limited in the ways I can assist.\"\n \n");
                 Console.WriteLine("As the voice finishes speaking, you hear a commotion outside.  There appear to be two distinct voices arguing with each other, though you can't quite make out their words.");
                 Console.WriteLine("Your options are:  \n1.) Investigate the commotion \n2.) Attempt to hide \n3.) Prepare for battle");
-                choice2 = input.InputKey();
+                choice2 = UserInput.InputKey();
             }
 
 
@@ -48,7 +49,7 @@ namespace Creatures_of_Calden
                 Console.WriteLine("You must break into the castle outside of the town you are in and find the throne room.  You must then destroy the throne.  I will attempt to aid in any way I can, though it won't be much.");
                 Console.WriteLine($"Right now, there are two bandits approaching this tavern.  They have been hired to kill you.  I suggest you kill them first.  I will talk to you more when I can.  Goodbye, fledgling {Game.player1.Class}\"");
                 Console.WriteLine("Your options are:  \n1.) Investigate the commotion \n2.) Attempt to hide \n3.) Prepare for battle");
-                choice2 = input.InputKey();
+                choice2 = UserInput.InputKey();
             }
 
             else if (choice == '3')
@@ -61,7 +62,56 @@ namespace Creatures_of_Calden
                 Console.WriteLine("Once you're inside, find the throne room and destroy the throne.  We're out of time.  Prepare yourself!\"");
                 Console.WriteLine("As the voice finishes speaking you hear two new voices coming from outside the tavern.  It appears the sound of you destroying the glass has alerted them to your location.");
                 Console.WriteLine("Your options are:  \n1.) Investigate and attempt to talk to the men  \n2.) Attempt to hide \n3.) Prepare for battle");
-                choice2 = input.InputKey();
+                choice2 = UserInput.InputKey();
+            }
+
+            if (choice2 == '1')
+            {
+                Console.WriteLine("You have chosen to investigate the men outside the tavern.  As you walk toward the door, you focus your attention on being stealthy.");
+                bool success = Game.player1.StealthCheck();
+                if (success)
+                {
+                    choice3 = Part1StealthSuccess.Part1Success();
+                }
+                else
+                {
+                    choice3 = Part1StealthFailure.Part1Failure();
+                }
+            }
+            if (choice2 == '2' || choice3 == '2')
+            {
+                Console.WriteLine("You've decided to hide in the tavern.  Maybe the people outside will just go away?");
+                bool success = Game.player1.StealthCheck();
+                if (success)
+                {
+                    choice3 = Part1StealthSuccess.Part2Success(choice2);
+                }
+                else
+                {
+                    choice3 = Part1StealthFailure.Part2Failure(choice2);
+                }
+                
+            }
+            if (choice2 == '3' || choice3 == '3')
+            {
+                Bandit bandit1 = new Bandit();
+                Bandit bandit2 = new Bandit();
+                if(Game.player1.Class == "fighter")
+                {
+                    Console.WriteLine("You draw your longsword in your dominant hand and your shortsword in the other.  You are ready to destroy anyone in your way.");
+                    Console.WriteLine("As you prepare to do battle, you let your adrenaline start to build.  You become hyper-focused.");
+                    Console.WriteLine("You let your battle cry leap from your lips with a fierce roar, preparing to challenge your enemies.");
+                    Console.WriteLine("You are confronted with two men wielding some rather nasty looking crude cudgels.  When you battle, the game works a bit differently.");
+                    Console.WriteLine("Each combatant has a chance to make a move one after the other.  You attack until you are dead or all of your enemies are.");
+                    while(bandit1.Health > 0 )
+                    {
+                        Game.player1.DealDamage(bandit1);
+                        int damage = bandit1.DealDamage();
+                        Game.player1.TakeDamage(damage);
+                        Console.WriteLine("Press enter to continue.");
+                        Console.ReadLine();
+                    }
+                }
             }
 
 

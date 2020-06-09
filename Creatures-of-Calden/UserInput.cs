@@ -4,25 +4,25 @@ using System.Text;
 
 namespace Creatures_of_Calden
 {
-    class UserInput
+    static class UserInput
     {
-        public string Input()
+        public static string Input()
         {
             string userInput = Console.ReadLine().ToLower();
             if (userInput == ("spellbook"))
             {
-                Game.player1.playerSpellbook.AccessSpellbook();
+                Game.player1.PlayerSpellbook.AccessSpellbook();
             }
 
             return (userInput);
         }
 
-        public char InputKey()
+        public static char InputKey()
         {
             char userInputKey = Console.ReadKey().KeyChar;
             if (userInputKey == 's')
             {
-                Game.player1.playerSpellbook.AccessSpellbook();
+                Game.player1.PlayerSpellbook.AccessSpellbook();
             }
             return (userInputKey);
         }

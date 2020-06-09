@@ -9,9 +9,6 @@ namespace Creatures_of_Calden
 
         public CharacterData CreateCharacter()
         {
-            CharacterData newCharacter = new CharacterData();
-            UserInput input = new UserInput();
-
             //create variables to hold user data
             int userAge;
 
@@ -31,12 +28,12 @@ namespace Creatures_of_Calden
             Console.WriteLine("Please input your user name.");
 
             //write user name to screen
-            newCharacter.UserName = input.Input();
-            Console.WriteLine($"Hello, {newCharacter.UserName}");
+            string userName = UserInput.Input();
+            Console.WriteLine($"Hello, {userName}");
 
             //obtains user age
             Console.WriteLine("Please input your age.");
-            userAge = int.Parse(input.Input());
+            userAge = int.Parse(UserInput.Input());
 
             //closes the app if user is underage.
             if (userAge < 18)
@@ -47,35 +44,34 @@ namespace Creatures_of_Calden
             //introduces the user to the world
             Console.WriteLine("We're glad to see that you meet our age requirements.  Prepare to be immersed in a world of danger and violence.");
             Console.WriteLine("In the world of Calden, there are many dangerous creatures.  Many of them will be too strong for you to defeat early on.");
-            Console.WriteLine("Throughout this game, you will be presented with 3 choices in any given situation.  The type of choices will vary based on the situation");
+            Console.WriteLine("Throughout this game, you will be presented with different choices based on any given situation.  Your choices will affect what happens to you.");
             Console.WriteLine("Press any key to continue.");
             Console.ReadLine();
             Console.WriteLine("If your health reaches 0, you will die, and the game will end.  There are a few ways you can restore health as you progress through the game");
-            Console.WriteLine("Drinking a potion will restore a set amount of health based on the type of potion.  Sleeping will restore you to full health.  Some items will also restore you to full health.");
-            //create a variable to hold user's class
-
-            
+            Console.WriteLine("Drinking a potion will restore a set amount of health based on the type of potion.  Sleeping will restore you to full health.  Some items will also restore you to full health.");            
             
             //determine the class the user wishes to play
-
             Console.WriteLine("Please choose a class for your adventure");
             Console.WriteLine("Your options are as follows:");
             Console.WriteLine("Rogue, Wizard, Barbarian, Fighter, Monk");
-            newCharacter.Class = input.InputKey();
-
+            char classChoice = UserInput.InputKey();
+            Console.WriteLine("");
+            string userClass = "";
+            
 
             //close application if user chooses monk
-            if (newCharacter.Class == 'm')
+            if (classChoice == 'm')
             {
                 Console.WriteLine("Rocks Fall.  Everyone Dies.");
                 System.Environment.Exit(0);
                 Console.ReadLine();
             }
 
-            Console.WriteLine("You have chosen " + newCharacter.Class);
+            
 
-            if (newCharacter.Class == 'r')
+            else if (classChoice == 'r')
             {
+                userClass = "rogue";
                 Console.WriteLine("Rogues start with two knives and a crossbow.");
                 Console.WriteLine("Rogues can wear light or medium armor.");
                 Console.WriteLine("At first level, rogues can sneak attack and disengage. \n");
@@ -83,26 +79,28 @@ namespace Creatures_of_Calden
 
             }
 
-            if (newCharacter.Class == 'w')
+            else if (classChoice == 'w')
             {
-                newCharacter.playerSpellbook = new SpellBook();
+                userClass = "wizard";
                 Console.WriteLine("Wizards start with a pouch of spell components, a spellbook, and a knife.");
                 Console.WriteLine("Wizards are not permitted to wear any armor per the Rialto Concord.");
                 Console.WriteLine("Wizards know three basic spells at Level 1 and learn more as they progress.");
                 Console.WriteLine("At Level 1, all wizards know the magic bolt, summon fire, and telekinesis spells.");
-                Console.WriteLine("To access your spellbook, simply type \"s\" at any time. \n");
+                Console.WriteLine("To access your spellbook, simply type \"s\" when prompted. \n");
                 Console.WriteLine("Press any key to continue.");
 
             }
-            if (newCharacter.Class == 'b')
+            else if (classChoice == 'b')
             {
+                userClass = "barbarian";
                 Console.WriteLine("Barbarians start with an axe and a wooden shield.");
                 Console.WriteLine("Barbarians are tough, and thus cannot wear armor, or their family will disown them.");
                 Console.WriteLine("At first level, barbarians can entle bloodlust twice a day. \n");
                 Console.WriteLine("Press any key to continue.");
             }
-            if (newCharacter.Class == 'f')
+            else if (classChoice == 'f')
             {
+                userClass = "fighter";
                 Console.WriteLine("Fighters start with a longsword, a shortsword, and rusty armor.");
                 Console.WriteLine("Fighters can wear any armor, as long they have a sufficient strength score. \n");
                 Console.WriteLine("Press any key to continue.");
@@ -112,6 +110,7 @@ namespace Creatures_of_Calden
             {
                 Console.WriteLine("It looks like you mistyped.  Please Try again.");
             }
+            CharacterData newCharacter = new CharacterData(userClass);
 
 
 
@@ -119,7 +118,7 @@ namespace Creatures_of_Calden
 
 
             //This will make sure the app stays open
-            Console.ReadLine();
+            Console.ReadKey();
             return newCharacter;
         }
 
