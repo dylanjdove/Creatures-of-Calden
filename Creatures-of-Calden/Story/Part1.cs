@@ -103,11 +103,42 @@ namespace Creatures_of_Calden
                     Console.WriteLine("You let your battle cry leap from your lips with a fierce roar, preparing to challenge your enemies.");
                     Console.WriteLine("You are confronted with two men wielding some rather nasty looking crude cudgels.  When you battle, the game works a bit differently.");
                     Console.WriteLine("Each combatant has a chance to make a move one after the other.  You attack until you are dead or all of your enemies are.");
-                    while(bandit1.Health > 0 )
+                    while(bandit1.Health > 0 && Game.player1.Health > 0)
                     {
                         Game.player1.DealDamage(bandit1);
-                        int damage = bandit1.DealDamage();
-                        Game.player1.TakeDamage(damage);
+                        if(bandit1.Health > 0)
+                        {
+                            int damage = bandit1.DealDamage();
+                            Game.player1.TakeDamage(damage);
+                        }                        
+                        if(Game.player1.Health <= 0)
+                        {
+                            Game.EndGame();
+                        }
+                        Console.WriteLine("Press enter to continue.");
+                        Console.ReadLine();
+                        
+                    }
+                }
+                else if (Game.player1.Class == "barbarian")
+                {
+                    Console.WriteLine("You draw your axe in your dominant hand and your shield in the other.  You are ready to destroy anyone in your way.");
+                    Console.WriteLine("As you prepare to do battle, you let the battle lust consume you.  You feel the fires of war course through your veins.");
+                    Console.WriteLine("Your voice explodes from you in a wordless roar, as you prepare to crush your enemies.");
+                    Console.WriteLine("You are confronted with two men wielding some rather nasty looking crude cudgels.  When you battle, the game works a bit differently.");
+                    Console.WriteLine("Each combatant automatically makes a move one after the other.  You attack until you are dead or all of your enemies are.");
+                    while (bandit1.Health > 0 && Game.player1.Health > 0)
+                    {
+                        Game.player1.DealDamage(bandit1);
+                        if (bandit1.Health > 0)
+                        {
+                            int damage = bandit1.DealDamage();
+                            Game.player1.TakeDamage(damage);
+                        }
+                        if (Game.player1.Health <= 0)
+                        {
+                            Game.EndGame();
+                        }
                         Console.WriteLine("Press enter to continue.");
                         Console.ReadLine();
                     }

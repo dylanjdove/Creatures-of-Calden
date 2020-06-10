@@ -22,11 +22,13 @@ namespace Creatures_of_Calden.Enemies
         {
             DieRoll roll = new DieRoll(20);
             int damageToDeal = 0;
+            Console.WriteLine("The bandit swings a cudgel at you!");
             if (roll.RollDie() > Game.player1.Defense)
             {                
                 damageToDeal = roll.RollDie() / 2;
                 Console.WriteLine($"You have taken {damageToDeal} damage.  Health remaining:  {Game.player1.Health - damageToDeal}");
             }
+            else Console.WriteLine("The bandit missed you!");
             return damageToDeal;
         }
     }

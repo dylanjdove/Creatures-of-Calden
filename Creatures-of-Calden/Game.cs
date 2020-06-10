@@ -16,6 +16,11 @@ namespace Creatures_of_Calden
             
 
         }
-        
+        public static void EndGame()
+        {
+            Console.WriteLine("You have died!  The game is over");
+            System.Environment.Exit(0);
+        }
+
     }
 }

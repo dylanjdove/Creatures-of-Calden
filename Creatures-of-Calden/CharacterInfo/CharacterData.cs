@@ -17,6 +17,7 @@ namespace Creatures_of_Calden
             Level = 1;
             if (userClass == "wizard")
             {
+                PlayerSpellbook = new SpellBook();
                 Class = "wizard";
                 Health = 20;
                 Inventory = new string[] { "health potion", "spellbook", };
@@ -121,6 +122,7 @@ namespace Creatures_of_Calden
         public void DealDamage(Enemy targetEnemy)
         {
             DieRoll d20 = new DieRoll(20);
+            DieRoll d12 = new DieRoll(12);
             DieRoll d10 = new DieRoll(10);
             DieRoll d8 = new DieRoll(8);
             int damageDealt = 0;
@@ -155,6 +157,25 @@ namespace Creatures_of_Calden
                 {
                     Console.WriteLine(failedHitMessage);
                 }
+                if (targetEnemy.Health <= 0)
+                {
+                    Console.WriteLine(killMessage);
+                }
+            }
+            else if (Class == "barbarian")
+            {
+                Console.WriteLine($"You swing your axe at the {targetEnemy.Name}");
+                int d20Roll = d20.RollDie();
+                if (d20Roll + this.Str > targetEnemy.Defense)
+                {
+                    damageDealt = d12.RollDie() + this.AtkPower;
+                    Console.WriteLine($"{successfulHitMessage}  {damageDealtMessage} {damageDealt}.");
+                    targetEnemy.TakeDamage(damageDealt);
+                }
+                else
+                {
+                    Console.WriteLine(failedHitMessage);
+                }                
                 if (targetEnemy.Health <= 0)
                 {
                     Console.WriteLine(killMessage);
