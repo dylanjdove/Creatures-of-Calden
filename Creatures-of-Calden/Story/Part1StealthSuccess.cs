@@ -44,8 +44,8 @@ namespace Creatures_of_Calden.Story
                 Console.WriteLine("\"Funny,\" you think to yourself, \"Nobody ever seems to look up in these situations.\"");
             }
             Console.WriteLine("You climb down from your hiding place in the rafters with a sigh of relief.  You have successfully avoided a fight you might not have survived.");
-            Console.WriteLine("You walk to the entrance and see a trail of dust as the two men ride off on a pair of horses.  They're long gone, and now adventure awaits you!");
-            Console.WriteLine("Your options are:  \n1.)  Follow the riders (maybe their going to the palace)  \n2.)  Go the opposite direction of the riders (they seem dangerous)  \n3.)  Take a nap (you're tired from all that hiding)");
+            Console.WriteLine("You walk to the entrance and see a cloud of dust as the two men ride off on a pair of horses.  They're long gone, and now adventure awaits you!");
+            Console.WriteLine("Your options are:  \n1.)  Follow the riders (maybe they're going to the palace)  \n2.)  Go the opposite direction of the riders (they seem dangerous)  \n3.)  Take a nap (you're tired from all that hiding)");
             return UserInput.InputKey();
         }
     }

@@ -46,11 +46,14 @@ namespace Creatures_of_Calden
         }
         
 
-        public int AttackSpell()
+        public int AttackSpell(Spell spellToUse)
         {
             int damageDealt = 0;
             Console.WriteLine("Which spell would you like to attack with?");
-            
+            if (spellToUse.IsAttackSpell)
+            {
+                damageDealt = spellToUse.Damage;
+            }
             return damageDealt;
         }
 
