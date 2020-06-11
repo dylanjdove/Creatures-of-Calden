@@ -24,3 +24,16 @@ D:\Git repos\Creatures-of-Calden\Creatures-of-Calden\obj\Debug\netcoreapp3.1\Cre
 D:\Git repos\Creatures-of-Calden\Creatures-of-Calden\obj\Debug\netcoreapp3.1\Creatures-of-Calden.dll
 D:\Git repos\Creatures-of-Calden\Creatures-of-Calden\obj\Debug\netcoreapp3.1\Creatures-of-Calden.pdb
 D:\Git repos\Creatures-of-Calden\Creatures-of-Calden\obj\Debug\netcoreapp3.1\Creatures-of-Calden.genruntimeconfig.cache
+C:\Users\Student\github\Creatures-of-Calden\Creatures-of-Calden\bin\Debug\netcoreapp3.1\Creatures-of-Calden.exe
+C:\Users\Student\github\Creatures-of-Calden\Creatures-of-Calden\bin\Debug\netcoreapp3.1\Creatures-of-Calden.deps.json
+C:\Users\Student\github\Creatures-of-Calden\Creatures-of-Calden\bin\Debug\netcoreapp3.1\Creatures-of-Calden.runtimeconfig.json
+C:\Users\Student\github\Creatures-of-Calden\Creatures-of-Calden\bin\Debug\netcoreapp3.1\Creatures-of-Calden.runtimeconfig.dev.json
+C:\Users\Student\github\Creatures-of-Calden\Creatures-of-Calden\bin\Debug\netcoreapp3.1\Creatures-of-Calden.dll
+C:\Users\Student\github\Creatures-of-Calden\Creatures-of-Calden\bin\Debug\netcoreapp3.1\Creatures-of-Calden.pdb
+C:\Users\Student\github\Creatures-of-Calden\Creatures-of-Calden\obj\Debug\netcoreapp3.1\Creatures-of-Calden.csprojAssemblyReference.cache
+C:\Users\Student\github\Creatures-of-Calden\Creatures-of-Calden\obj\Debug\netcoreapp3.1\Creatures-of-Calden.csproj.CoreCompileInputs.cache
+C:\Users\Student\github\Creatures-of-Calden\Creatures-of-Calden\obj\Debug\netcoreapp3.1\Creatures-of-Calden.AssemblyInfoInputs.cache
+C:\Users\Student\github\Creatures-of-Calden\Creatures-of-Calden\obj\Debug\netcoreapp3.1\Creatures-of-Calden.AssemblyInfo.cs
+C:\Users\Student\github\Creatures-of-Calden\Creatures-of-Calden\obj\Debug\netcoreapp3.1\Creatures-of-Calden.dll
+C:\Users\Student\github\Creatures-of-Calden\Creatures-of-Calden\obj\Debug\netcoreapp3.1\Creatures-of-Calden.pdb
+C:\Users\Student\github\Creatures-of-Calden\Creatures-of-Calden\obj\Debug\netcoreapp3.1\Creatures-of-Calden.genruntimeconfig.cache

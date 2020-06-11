@@ -181,6 +181,46 @@ namespace Creatures_of_Calden
                     Console.WriteLine(killMessage);
                 }
             }
+            else if (Class == "wizard")
+            {
+                Console.WriteLine("Would you like to use a spell? (y/n)");
+                char yesOrNo = UserInput.InputKey();
+                if(yesOrNo == 'y')
+                {
+                    bool choseSpell = false;
+                    while (!choseSpell)
+                    {
+                        Console.WriteLine("Type the name of the spell you'd like to use or \"s\" to access your spellbook.");
+                        string chosenSpell = UserInput.Input();
+                        if (chosenSpell == "s")
+                        {
+                            Game.player1.PlayerSpellbook.AccessSpellbook();
+                        }
+                        else if (Game.player1.PlayerSpellbook.Spells[chosenSpell].IsAttackSpell)
+                        {
+                            int damage = Game.player1.PlayerSpellbook.AttackSpell(Game.player1.PlayerSpellbook.Spells[chosenSpell]);
+                            choseSpell = true;
+                            int d20Roll = d20.RollDie();
+                            if (d20Roll + this.Int > targetEnemy.Defense)
+                            {
+                                damageDealt = damage + this.AtkPower;
+                                Console.WriteLine($"{successfulHitMessage}  {damageDealtMessage} {damageDealt}.");
+                                targetEnemy.TakeDamage(damageDealt);
+                            }
+                            else
+                            {
+                                Console.WriteLine(failedHitMessage);
+                            }
+                            if (targetEnemy.Health <= 0)
+                            {
+                                Console.WriteLine(killMessage);
+                            }
+                        }
+                        else Console.WriteLine("It seems you've chosen a non-attack spell.  Please choose a different spell.");
+                    }
+                    
+                }
+            }
         }
     }
 }

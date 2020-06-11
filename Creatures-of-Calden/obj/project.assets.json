@@ -8,19 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\dylan\\.nuget\\packages\\": {}
+    "C:\\Users\\Student\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Git repos\\Creatures-of-Calden\\Creatures-of-Calden\\Creatures-of-Calden.csproj",
+      "projectUniqueName": "C:\\Users\\Student\\github\\Creatures-of-Calden\\Creatures-of-Calden\\Creatures-of-Calden.csproj",
       "projectName": "Creatures-of-Calden",
-      "projectPath": "D:\\Git repos\\Creatures-of-Calden\\Creatures-of-Calden\\Creatures-of-Calden.csproj",
-      "packagesPath": "C:\\Users\\dylan\\.nuget\\packages\\",
-      "outputPath": "D:\\Git repos\\Creatures-of-Calden\\Creatures-of-Calden\\obj\\",
+      "projectPath": "C:\\Users\\Student\\github\\Creatures-of-Calden\\Creatures-of-Calden\\Creatures-of-Calden.csproj",
+      "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Student\\github\\Creatures-of-Calden\\Creatures-of-Calden\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\dylan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -58,7 +62,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

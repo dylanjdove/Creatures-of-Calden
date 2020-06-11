@@ -13,12 +13,12 @@ namespace Creatures_of_Calden
         public SpellBook()
         {
             Spells = new Dictionary<string, Spell>();
-            Spell magicBolt = new Spell(10, "Magic Bolt", "Produces a bolt of magical energy that does an automatic 10 dmg to any enemy.", true);
+            Spell magicBolt = new Spell(8, "Magic Bolt", "Produces a bolt of magical energy that does an automatic 10 dmg to any enemy.", true);
             Spell summonFire = new Spell(0, "Summon Fire", "Summons flame from the magic around you.  Instantly sets any flammable object on fire", false);
             Spell telekinesis = new Spell(0, "Telekinesis", "Allows you to life objects no heavier than 10 lbs from a distance of up to 30 feet.", false);
-            Spells.Add("Magic Bolt", magicBolt);
-            Spells.Add("Summon Fire", summonFire);
-            Spells.Add("Telekinesis", telekinesis);
+            Spells.Add("magic bolt", magicBolt);
+            Spells.Add("summon fire", summonFire);
+            Spells.Add("telekinesis", telekinesis);
         }
 
         public void AccessSpellbook()
@@ -41,6 +41,7 @@ namespace Creatures_of_Calden
             {
                 Console.WriteLine($"{spell}: {Spells[spell]}");
             }
+            Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
 
         }
@@ -49,7 +50,8 @@ namespace Creatures_of_Calden
         public int AttackSpell(Spell spellToUse)
         {
             int damageDealt = 0;
-            Console.WriteLine("Which spell would you like to attack with?");
+            //decided to put this message in CharacterData.DealDamage()
+            //Console.WriteLine("Which spell would you like to attack with?");
             if (spellToUse.IsAttackSpell)
             {
                 damageDealt = spellToUse.Damage;
